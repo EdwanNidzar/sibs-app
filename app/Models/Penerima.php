@@ -33,4 +33,9 @@ class Penerima extends Model
     {
         return $this->belongsTo(Village::class);
     }
+
+    public function rumah()
+    {
+        return $this->hasOne(Rumah::class);
+    }
 }

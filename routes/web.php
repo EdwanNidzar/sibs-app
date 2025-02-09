@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PenerimaController;
+use App\Http\Controllers\RumahController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,5 +44,9 @@ Route::resource('penerima', PenerimaController::class)->middleware('auth');
 Route::get('/get-villages/{district_id}', [PenerimaController::class, 'getVillages']);
 Route::get('/exportPdfPenerima', [PenerimaController::class, 'exportPdfPenerima'])->name('exportPdfPenerima');
 Route::get('/exportPdfPenerimaByDistrict', [PenerimaController::class, 'exportPdfPenerimaByDistrict'])->name('exportPdfPenerimaByDistrict');
+
+//rumah
+Route::resource('rumah', RumahController::class)->middleware('auth');
+Route::get('/exportPdfRumah', [RumahController::class, 'exportPdfRumah'])->name('exportPdfRumah');
 
 require __DIR__.'/auth.php';
