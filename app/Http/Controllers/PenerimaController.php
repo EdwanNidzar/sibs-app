@@ -135,4 +135,18 @@ class PenerimaController extends Controller
         $pdf = PDF::loadView('penerima.pdf', compact('penerimas'))->setPaper('a4', 'landscape');
         return $pdf->stream('data-penerima.pdf');
     }
+
+    /**
+     * Export data penerima berdasarkan kecamatan
+     */
+    public function exportPdfPenerimaByDistrict()
+    {
+        $districts = District::where('regency_id', 6310)->get();
+        $districts->map(function ($district) {
+            $district->penerima_count = Penerima::where('district_id', $district->id)->count();
+        });
+
+        $pdf = PDF::loadView('penerima.pdfByDistrict', compact('districts'))->setPaper('a4', 'portrait');
+        return $pdf->stream('data-penerima-by-kecamatan.pdf');
+    }
 }

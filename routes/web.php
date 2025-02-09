@@ -42,5 +42,6 @@ Route::get('/exportPdfBantuan', [BantuanController::class, 'exportPdf'])->name('
 Route::resource('penerima', PenerimaController::class)->middleware('auth');
 Route::get('/get-villages/{district_id}', [PenerimaController::class, 'getVillages']);
 Route::get('/exportPdfPenerima', [PenerimaController::class, 'exportPdfPenerima'])->name('exportPdfPenerima');
+Route::get('/exportPdfPenerimaByDistrict', [PenerimaController::class, 'exportPdfPenerimaByDistrict'])->name('exportPdfPenerimaByDistrict');
 
 require __DIR__.'/auth.php';

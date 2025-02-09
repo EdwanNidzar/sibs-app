@@ -90,6 +90,9 @@
                         <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800">
                             <a class="w-full" href="{{ route('exportPdfPenerima') }}" target="_blank">Report Penerima</a>
                         </li>
+                        <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800">
+                            <a class="w-full" href="{{ route('exportPdfPenerimaByDistrict') }}" target="_blank">Report Penerima berdasarkan Kecamatan</a>
+                        </li>
                     </ul>
                 </template>
             </li>    
