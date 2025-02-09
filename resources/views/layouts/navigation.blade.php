@@ -55,6 +55,9 @@
                         <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800">
                             <a class="w-full" href="{{ route('bantuan.index') }}">Bantuan</a>
                         </li>
+                        <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800">
+                            <a class="w-full" href="{{ route('penerima.index') }}">Penerima</a>
+                        </li>
                     </ul>
                 </template>
             </li>
@@ -83,6 +86,9 @@
                         aria-label="submenu">
                         <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800">
                             <a class="w-full" href="{{ route('exportPdfBantuan') }}" target="_blank">Report Bantuan</a>
+                        </li>
+                        <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800">
+                            <a class="w-full" href="{{ route('exportPdfPenerima') }}" target="_blank">Report Penerima</a>
                         </li>
                     </ul>
                 </template>

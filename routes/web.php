@@ -4,6 +4,7 @@ use App\Http\Controllers\BantuanController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PenerimaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +36,11 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('bantuan', BantuanController::class)->middleware('auth');
-Route::get('/exportPdf', [BantuanController::class, 'exportPdf'])->name('exportPdfBantuan');
+Route::get('/exportPdfBantuan', [BantuanController::class, 'exportPdf'])->name('exportPdfBantuan');
+
+//penerima
+Route::resource('penerima', PenerimaController::class)->middleware('auth');
+Route::get('/get-villages/{district_id}', [PenerimaController::class, 'getVillages']);
+Route::get('/exportPdfPenerima', [PenerimaController::class, 'exportPdfPenerima'])->name('exportPdfPenerima');
 
 require __DIR__.'/auth.php';
