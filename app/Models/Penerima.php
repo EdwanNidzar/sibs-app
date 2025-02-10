@@ -38,4 +38,9 @@ class Penerima extends Model
     {
         return $this->hasOne(Rumah::class);
     }
+
+    public function penerimaBantuan()
+    {
+        return $this->hasMany(PenerimaBantuan::class);
+    }
 }

@@ -19,4 +19,9 @@ class Bantuan extends Model
     {
         return ['Permakanan','Uang Tunai','Alat Penyandang Disabilitas','Paket Usaha','RS-RLTH'];
     }
+
+    public function penerimaBantuan()
+    {
+        return $this->hasMany(PenerimaBantuan::class);
+    }
 }

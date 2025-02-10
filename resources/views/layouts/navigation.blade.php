@@ -61,6 +61,9 @@
                         <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800">
                             <a class="w-full" href="{{ route('rumah.index') }}">Rumah</a>
                         </li>
+                        <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800">
+                            <a class="w-full" href="{{ route('penerima-bantuan.index') }}">Penerima Bantuan</a>
+                        </li>
                     </ul>
                 </template>
             </li>
@@ -98,6 +101,9 @@
                         </li>
                         <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800">
                             <a class="w-full" href="{{ route('exportPdfRumah') }}" target="_blank">Report Rumah</a>
+                        </li>
+                        <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800">
+                            <a class="w-full" href="{{ route('exportPdfPenerimaBantuan') }}" target="_blank">Report Penerima Bantuan</a>
                         </li>
                     </ul>
                 </template>

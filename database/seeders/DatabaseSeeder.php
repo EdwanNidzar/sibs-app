@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
         // penerima seeder buat data penerima 10 dumy data
         \App\Models\Penerima::factory(10)->create();
 
+        // penerima bantuan seeder buat data penerima bantuan 10 dumy data
         \App\Models\Rumah::factory(10)->create();
     }
 }
