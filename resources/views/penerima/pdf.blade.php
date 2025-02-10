@@ -36,6 +36,7 @@
 
 <body>
 
+  <img src="{{ public_path('assets/svg/KOP.svg') }}" alt="Kop Surat" style="width: 100%;">
   <h2 class="text-center">Laporan Data Penerima</h2>
 
   <table>
@@ -72,6 +73,10 @@
       @endforeach
     </tbody>
   </table>
+
+  <div style="margin-top: 20px; text-align: right;">
+    <img src="{{ public_path('assets/svg/ttd-kadis-rev-02-02.svg') }}" alt="Tanda Tangan" style="width: 200px;">
+  </div>
 
 </body>
 
