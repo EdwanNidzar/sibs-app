@@ -24,7 +24,7 @@
 </head>
 <body>
     <img src="{{ public_path('assets/svg/KOP.svg') }}" alt="Kop Surat" style="width: 100%;">
-    
+    <hr style="border: 1px solid black;">
     <h2 style="text-align: center">Laporan Data Penerima Per Kecamatan</h2>
     <table>
         <thead>

@@ -131,7 +131,7 @@ class PenerimaController extends Controller
      */
     public function exportPdfPenerima()
     {
-        $penerimas = Penerima::with(['district', 'village'])->orderBy('id', 'desc')->get();
+        $penerimas = Penerima::with(['district', 'village'])->where('status_hidup', 'Hidup')->orderBy('id', 'desc')->get();
         $pdf = PDF::loadView('penerima.pdf', compact('penerimas'))->setPaper('a4', 'landscape');
         return $pdf->stream('data-penerima.pdf');
     }

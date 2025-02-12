@@ -40,6 +40,7 @@
 
 <body>
   <img src="{{ public_path('assets/svg/KOP.svg') }}" alt="Kop Surat" style="width: 100%;">
+  <hr style="border: 1px solid black;">
   <div class="title">Laporan Data Rumah</div>
 
   <table class="table">

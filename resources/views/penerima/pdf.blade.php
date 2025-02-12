@@ -37,6 +37,7 @@
 <body>
 
   <img src="{{ public_path('assets/svg/KOP.svg') }}" alt="Kop Surat" style="width: 100%;">
+  <hr style="border: 1px solid black;">
   <h2 class="text-center">Laporan Data Penerima</h2>
 
   <table>
@@ -52,7 +53,6 @@
         <th>Alamat</th>
         <th>Status DTKS</th>
         <th>Kategori</th>
-        <th>Status Hidup</th>
       </tr>
     </thead>
     <tbody>
@@ -62,13 +62,12 @@
           <td>{{ $penerima->nik }}</td>
           <td>{{ $penerima->no_kk }}</td>
           <td>{{ $penerima->nama_lengkap }}</td>
-          <td>{{ $penerima->jk == 'L' ? 'Laki-laki' : 'Perempuan' }}</td>
+          <td>{{ $penerima->jk == 'Laki-laki' ? 'Laki-laki' : 'Perempuan' }}</td>
           <td>{{ $penerima->district->name ?? '-' }}</td>
           <td>{{ $penerima->village->name ?? '-' }}</td>
           <td>{{ $penerima->alamat_penerima }}</td>
           <td>{{ $penerima->dtks_status }}</td>
           <td>{{ $penerima->kategori }}</td>
-          <td>{{ $penerima->status_hidup }}</td>
         </tr>
       @endforeach
     </tbody>
